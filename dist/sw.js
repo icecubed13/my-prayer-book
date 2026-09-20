@@ -1,4 +1,4 @@
-const CACHE_NAME = 'my-prayer-book-v3';
+const CACHE_NAME = 'my-prayer-book-v4';
 const OFFLINE_ASSETS = [
   './',
   './index.html',
