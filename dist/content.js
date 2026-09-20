@@ -13,11 +13,19 @@ window.SIDDUR_DATA = {
       entries: [],
     },
     {
+      id: 'erevShabbat',
+      title: 'Erev Shabbat',
+      hebrew: 'שבת',
+      description: 'Blessings and readings for welcoming and observing Shabbat.',
+      suggested: ['Candle lighting', 'Kiddush', 'Blessing over bread'],
+      entries: [],
+    },
+    {
       id: 'shabbat',
       title: 'Shabbat',
       hebrew: 'שבת',
-      description: 'Blessings and readings for welcoming and observing Shabbat.',
-      suggested: ['Candle lighting', 'Kiddush', 'Blessing over bread', 'Havdalah'],
+      description: 'Blessings and readings for observing the weekly Shabbat.',
+      suggested: ['Before Torah Reading', 'Kiddush', 'Blessing over bread', 'Havdalah'],
       entries: [],
     },
     {
