@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
+    "deploy:cloudflare": "node scripts/prepare-wrangler.mjs && wrangler deploy --config .wrangler.deploy.jsonc",
     "db:setup": "wrangler d1 execute siddur-sync --remote --file=./schema.sql"
   },
   "devDependencies": {
