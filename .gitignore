@@ -1,6 +1,7 @@
 node_modules/
 .wrangler/
 .wrangler-dry-run/
+.wrangler.deploy.jsonc
 .dev.vars
 .env
 .env.*
