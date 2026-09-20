@@ -11,13 +11,13 @@ npm run dev
 
 ## Deploy
 
-Authenticate Wrangler once with `npx wrangler login`, then run:
+1. Create a Cloudflare D1 database named `siddur-sync`.
+2. Replace `REPLACE_WITH_YOUR_D1_DATABASE_ID` in `wrangler.jsonc` with that database's ID.
+3. Authenticate Wrangler once with `npx wrangler login`.
+4. Initialize the new database with `npm run db:setup`.
+5. Deploy with `npm run deploy`.
 
-```bash
-npm run deploy
-```
-
-The existing D1 database is configured in `wrangler.jsonc`. Run `npm run db:setup` only when initializing a new database or intentionally applying a future schema change.
+Run `npm run db:setup` again only when intentionally applying a future schema change.
 
 ## Data and access
 
