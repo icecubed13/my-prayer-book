@@ -1,0 +1,48 @@
+window.SIDDUR_DATA = {
+  title: 'My Prayer Book',
+  subtitle: 'A personal collection of prayers and blessings',
+  storageKey: 'my-prayer-book-content-v1',
+  files: {},
+  groups: [
+    {
+      id: 'daily-prayer',
+      title: 'Daily Prayer',
+      hebrew: 'תפילה יומית',
+      description: 'Prayers for the regular rhythm of morning, evening, meals, and rest.',
+      suggested: ['Morning prayer', 'Shema', 'Evening prayer', 'Bedtime prayer'],
+      entries: [],
+    },
+    {
+      id: 'shabbat',
+      title: 'Shabbat',
+      hebrew: 'שבת',
+      description: 'Blessings and readings for welcoming and observing Shabbat.',
+      suggested: ['Candle lighting', 'Kiddush', 'Blessing over bread', 'Havdalah'],
+      entries: [],
+    },
+    {
+      id: 'blessings',
+      title: 'Blessings',
+      hebrew: 'ברכות',
+      description: 'Blessings for food, gratitude, family, travel, and daily moments.',
+      suggested: ['Food and drink', 'Thanksgiving', 'Children', 'Travel'],
+      entries: [],
+    },
+    {
+      id: 'appointed-times',
+      title: 'Appointed Times',
+      hebrew: 'מועדים',
+      description: 'Prayers and readings for festivals, holy days, and sacred seasons.',
+      suggested: ['Passover', 'Shavuot', 'Yom Teruah', 'Yom Kippur', 'Sukkot'],
+      entries: [],
+    },
+    {
+      id: 'special-prayers',
+      title: 'Special Prayers',
+      hebrew: 'תפילות מיוחדות',
+      description: 'Prayers for particular needs, milestones, remembrance, and seasons of life.',
+      suggested: ['Healing', 'Mourning', 'Peace', 'Protection', 'Celebration'],
+      entries: [],
+    },
+  ],
+};
