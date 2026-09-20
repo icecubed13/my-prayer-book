@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#102942" />
+  <meta name="description" content="A customizable, offline prayer and blessing collection." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="My Prayer Book" />
+  <title>My Prayer Book</title>
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('siddur-theme');
+      const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = savedTheme || preferredTheme;
+    } catch {
+      document.documentElement.dataset.theme = 'light';
+    }
+  </script>
+  <link rel="icon" type="image/svg+xml" href="icon.svg" />
+  <link rel="apple-touch-icon" href="icon.svg" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#reader">Skip to prayer</a>
+  <header class="topbar">
+    <button class="icon-button menu-button" id="menuButton" aria-label="Open table of contents" aria-expanded="false" aria-controls="sidebar">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="#home" class="brand" aria-label="My Prayer Book home">
+      <span class="brand-mark" aria-hidden="true">ש</span>
+      <span><b>סידור</b><small>MY PRAYER BOOK</small></span>
+    </a>
+    <div class="top-actions">
+      <a class="text-button manage-button" href="#manage" aria-label="Manage prayers" title="Manage prayers">＋</a>
+      <button class="text-button theme-button" id="themeButton" aria-label="Switch to dark mode" title="Switch to dark mode">
+        <span id="themeIcon" aria-hidden="true">☾</span>
+      </button>
+      <button class="text-button" id="fontButton" aria-label="Change text size">Aa</button>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Table of contents">
+      <div class="sidebar-heading">
+        <p>Table of Contents</p>
+        <button class="icon-button close-button" id="closeButton" aria-label="Close table of contents">×</button>
+      </div>
+      <nav id="toc"></nav>
+      <p class="sidebar-footer">“My Adonai, open my lips,<br />and my mouth shall declare Your praise.”</p>
+    </aside>
+    <div class="scrim" id="scrim" hidden></div>
+
+    <main id="reader" tabindex="-1">
+      <section class="home-view" id="home" aria-labelledby="homeTitle">
+        <div class="home-ornament" aria-hidden="true"><span></span>✦<span></span></div>
+        <p class="eyebrow">תפילות וברכות</p>
+        <h1 id="homeTitle">Your Prayers<br /><i>&amp;</i> Blessings</h1>
+        <p class="intro">Begin with one of the suggested sections or create your own. Everything you add stays on this device unless you export a backup.</p>
+        <div class="collection-grid" id="collectionGrid"></div>
+      </section>
+      <section class="reading-view" id="readingView" hidden aria-live="polite"></section>
+      <section class="manage-view" id="manageView" hidden aria-live="polite"></section>
+    </main>
+  </div>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Return to top" aria-hidden="true" tabindex="-1" title="Return to top">
+    <span aria-hidden="true">↑</span>
+  </button>
+
+  <script src="content.js"></script>
+  <script src="manager.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
